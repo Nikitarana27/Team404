@@ -1,0 +1,41 @@
+
+.user-table{
+    width: 40%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    right: 10%;
+}
+h2{
+   text-align: center;
+}
+
+#navbar ul{
+    display: flex;
+    margin-left: 55%;
+    
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1rem;
+}
+
+#navbar ul li a{
+    color: rgb(249, 255, 255);
+    display: block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    font:bold;
+}
+#navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    display: block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);  
+    font-family: 'Bree Serif', serif; 
+
+}
