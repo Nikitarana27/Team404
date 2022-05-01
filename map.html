@@ -82,6 +82,10 @@
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.48);
         cursor: pointer;
       }
+      .iot{
+        text-align:right;
+        padding-right: 400px;
+      }
     </style>
     <script>
     "use strict";
@@ -188,6 +192,28 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpZcULwJLw4bi4XgMeICPVIyGm1Yh0Wsk&libraries=places&callback=initMap&solution_channel=GMP_QB_addressselection_v1_cABC" async defer></script>
         
     
+    </div>
+
+    <div class="iot">
+    
+        <button onClick="sms()" style="background-color: aquamarine; border-radius: 10px;border-width: 0.5px;">IoT Device Shows Low Moisture</button>
+        <script>
+          function sms()
+            {
+            const accountSid = process.env.ACffb87ccf579e74a80a6f1ee1ae491ddc;
+            var authToken="888a3b34696842a4e4ba60d0f92c402d"
+            const authToken = process.env.authToken;
+            const client = require('twilio')(accountSid, authToken);
+
+            client.messages
+              .create({
+                body: 'Come on , Give Water to your Plant',
+                from: '+19894873216',
+                to: '+919725030987'
+              })
+              .then(message => console.log(message.sid));
+            }
+        </script>
     </div>
   
 </body>
